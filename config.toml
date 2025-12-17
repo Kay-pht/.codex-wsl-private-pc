@@ -23,3 +23,11 @@ trust_level = "untrusted"
 "hide_gpt-5.1-codex-max_migration_prompt" = true
 
 hide_full_access_warning = true
+
+[mcp_servers.serena]
+command = "uvx"
+args = ["--from", "git+https://github.com/oraios/serena", "serena", "start-mcp-server", "--context", "codex"]
+
+[mcp_servers.playwright]
+command = "npx"
+args = ["@playwright/mcp@latest"]
