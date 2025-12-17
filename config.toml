@@ -1,0 +1,25 @@
+model = "gpt-5.1-codex-max"
+model_reasoning_effort = "xhigh"
+network_access = true
+approval_policy = "never"
+sandbox_mode = "danger-full-access"
+
+# `notify` はトップレベルのキーです（`[notice]`の中に置くと効きません）。
+# Codex は最後の引数として JSON を渡して呼び出します。`bash -lc` を挟むと余計な引数の影響を受けません。
+# WSL2 では Windows 側の音源を鳴らすのが確実なので、PowerShell で Windows の通知音 (.wav) を再生します。
+notify = ["bash", "-lc", "powershell.exe -NoProfile -NoLogo -Command '$title=\"Codex\"; $body=\"Turn complete\"; [Windows.UI.Notifications.ToastNotificationManager, Windows.UI.Notifications, ContentType = WindowsRuntime] | Out-Null; $doc=[Windows.UI.Notifications.ToastNotificationManager]::GetTemplateContent([Windows.UI.Notifications.ToastTemplateType]::ToastText02); $textNodes=$doc.GetElementsByTagName(\"text\"); $textNodes.Item(0).AppendChild($doc.CreateTextNode($title)) | Out-Null; $textNodes.Item(1).AppendChild($doc.CreateTextNode($body)) | Out-Null; $toast=[Windows.UI.Notifications.ToastNotification]::new($doc); [Windows.UI.Notifications.ToastNotificationManager]::CreateToastNotifier(\"Codex\").Show($toast);'"]
+
+[projects."/home/kei/.local"]
+trust_level = "untrusted"
+
+[projects."/home/kei/.local/dev/ai-hack/ai-hack-starter"]
+trust_level = "trusted"
+sandbox_mode= "danger-full-access"
+
+[projects."/home/kei/.codex"]
+trust_level = "untrusted"
+
+[notice]
+"hide_gpt-5.1-codex-max_migration_prompt" = true
+
+hide_full_access_warning = true
