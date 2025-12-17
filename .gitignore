@@ -1,3 +1,4 @@
 log/
 .serena/
 sessions/
+auth.json
