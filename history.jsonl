@@ -116,3 +116,9 @@
 {"session_id":"019b2a73-e412-7673-b274-4da1fe016caf","ts":1765944127,"text":"このリポジトリについておしえて"}
 {"session_id":"019b2a4e-2cbd-78c2-8bec-76c07bf22cfc","ts":1765944187,"text":"もっと近未来的なサウンドにして"}
 {"session_id":"019b2a56-2b7c-73d3-bb19-709d2326a943","ts":1765946149,"text":"encryptとしているのはなぜか?これは何のためにしているのか?"}
+{"session_id":"019b2a8b-725e-7080-8544-7a14f4bde1fc","ts":1765949897,"text":"flowchart LR\n  A[\"ユーザー（Windows Terminal / PowerShell など）\"] --> B[\"wsl.exe（起動コマンド）\"]\n  B --> C[\"WSL管理（起動・停止・接続など）\"]\n\n  C -->|WSL 1| D[\"Linuxプロセス（ユーザー空間）\"]\n  D --> E[\"Linuxシステムコールを変換\"]\n  E --> F[\"Windowsカーネル\"]\n\n  C -->|WSL 2| G[\"軽量VM（Hyper-V基盤）\"]\n  G --> H[\"Linuxカーネル（実物）\"]\n  H --> I[\"Linuxプロセス（ユーザー空間）\"]\n  G --> F mermaid図を使って分かりやすく図示してください。マーメイドになっていません"}
+{"session_id":"019b2ad2-1492-7982-9296-5266b08eedb7","ts":1765949989,"text":"コンテンツをencryptしているが、これの理由を教えて 必要があるのか?"}
+{"session_id":"019b2ad2-1492-7982-9296-5266b08eedb7","ts":1765950234,"text":"続けて"}
+{"session_id":"019b2ad7-5bc2-78a3-aabc-3f77a4cbd616","ts":1765950318,"text":"コンテンツをencryptしているが、これの理由を教えて 必要があるのか?"}
+{"session_id":"019b2ad8-4655-76b1-9f1a-364080d15bb7","ts":1765950378,"text":"say hi"}
+{"session_id":"019b2ad8-4655-76b1-9f1a-364080d15bb7","ts":1765950422,"text":"このリポジトリは何をするものなのか?"}
