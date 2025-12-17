@@ -1,0 +1,4 @@
+- Respond in Japanese.
+- Use Serena MCP to execute tasks.
+- 結論ファーストで回答して
+- 勝手な憶測や推測は禁止。常に具体的な根拠を持って回答すること。
