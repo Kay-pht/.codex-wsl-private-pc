@@ -1,4 +1,4 @@
-model = "gpt-5.1-codex-max"
+model = "gpt-5.2-codex"
 model_reasoning_effort = "xhigh"
 network_access = true
 approval_policy = "never"
@@ -23,6 +23,9 @@ trust_level = "untrusted"
 "hide_gpt-5.1-codex-max_migration_prompt" = true
 
 hide_full_access_warning = true
+
+[notice.model_migrations]
+"gpt-5.1-codex-max" = "gpt-5.2-codex"
 
 [mcp_servers.serena]
 command = "uvx"
